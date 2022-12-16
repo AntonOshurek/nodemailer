@@ -23,9 +23,6 @@ jobs:
       - name: Installing Dependencies
         run: npm ci
 
-      - name: Start
-        run: npm start
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
@@ -33,3 +30,4 @@ jobs:
           FOLDER: ./
           BRANCH: gh-pages
           SINGLE_COMMIT: false
+        run: npm start
